@@ -1,10 +1,11 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. 
-* 2. 
-* 3. 
-* 4. 
+* 1. The "Window" binding is when the "this" keyword is invoked in the global scope or not used in the object.
+* 2. The "Implicit" binding is when the "this" keyword is called inside of the object this is the most common use of the "this" keyword.
+* 3. The "New Binding" is when the "this" keyword is used in a constructor to create an object and its properties.
+* 4. The "Explicit Binding"
+is when we can override what the constructor objects get set to by calling them using the .call and the .apply.
 *
 * write out a code example of each explanation above
 */
