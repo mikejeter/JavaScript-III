@@ -69,7 +69,6 @@ GameObject.prototype.destroy = function () {
 function CharacterStats(attributes) {
   GameObject.call(this, attributes);
   this.healthPoints = attributes.healthPoints;
-  // this.maxHP = attributes.maxHP;
 }
 
 CharacterStats.prototype = Object.create(GameObject.prototype);
