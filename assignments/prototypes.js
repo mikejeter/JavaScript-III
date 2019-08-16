@@ -16,15 +16,15 @@
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
 
-function GameObject(attrs) {
-  this.createdAt = attrs.createdAt;
-  this.name = attrs.name;
-  this.dimensions = attrs.dimensions;
-}
+// function GameObject(attrs) {
+//   this.createdAt = attrs.createdAt;
+//   this.name = attrs.name;
+//   this.dimensions = attrs.dimensions;
+// }
 
-GameObject.prototype.destroy = function () {
-  return ` ${this.name} was removed from the game.`;
-};
+// GameObject.prototype.destroy = function () {
+//   return ` ${this.name} was removed from the game.`;
+// };
 
 /*
   === CharacterStats ===
@@ -32,13 +32,13 @@ GameObject.prototype.destroy = function () {
   * takeDamage() // prototype method -> returns the string '<object name> took damage.'
   * should inherit destroy() from GameObject's prototype
 */
-function CharacterStats(attrs) {
-  this.healthPoints = attrs.healthPoints;
-}
+// function CharacterStats(attrs) {
+//   this.healthPoints = attrs.healthPoints;
+// }
 
-CharacterStats.prototype.takeDamage = function () {
-  return `${this.name} took damage.`;
-};
+// CharacterStats.prototype.takeDamage = function () {
+//   return `${this.name} took damage.`;
+// };
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
@@ -69,20 +69,16 @@ GameObject.prototype.destroy = function () {
 function CharacterStats(attributes) {
   GameObject.call(this, attributes);
   this.healthPoints = attributes.healthPoints;
-  this.maxHP = attributes.maxHP;
+  // this.maxHP = attributes.maxHP;
 }
 
 CharacterStats.prototype = Object.create(GameObject.prototype);
 
 
-CharacterStats.prototype.takeDamage = function (dmg = 1) {
-  this.healthPoints -= dmg;
-  if (this.healthPoints <= 0) {
-    console.log(`${this.name} took ${dmg} damage.`);
-    return this.destroy();
-  }
-  return `${this.name} took ${dmg} damage.\n${this.name} has ${this.healthPoints} health.`;
+CharacterStats.prototype.takeDamage = function () {
+  return `${this.name} took damage.`;
 };
+
 
 function Humanoid(attributes) {
   CharacterStats.call(this, attributes);
